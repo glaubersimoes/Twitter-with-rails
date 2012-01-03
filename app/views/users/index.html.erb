@@ -1,0 +1,10 @@
+<h1>Todos usuarios</h1>
+
+<%= will_paginate :previous_label => '« Anterior',:next_label => 'Próximo »'%>  
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= will_paginate :previous_label => '« Anterior',:next_label => 'Próximo »'%>  
+

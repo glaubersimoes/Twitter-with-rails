@@ -1,0 +1,25 @@
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="micropost">O que está acontecendo?</h1>
+        <%= render 'shared/microposts_form' %>
+ 		<%= render 'shared/feed' %>
+      </td>
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %>
+        <%= render 'shared/stats' %>
+      </td>
+    </tr>
+  </table>
+<% else %>
+  <h1>Twitter</h1>
+
+  <p>
+    Pequeno exemplo de twitter feito através deste tutorial
+    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+    .
+  </p>
+
+  <%= link_to "Cadastrar", signup_path, :class => "signup_button round" %>
+<% end %>
